@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Car Racing Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- START SCREEN -->
+  <div id="start-screen" class="screen">
+    <div class="screen-box">
+      <h1>🏎️ Turbo Rush</h1>
+      <p class="subtitle">3D Car Racing Game</p>
+      <div class="controls-info">
+        <p>⬅ ➡ &nbsp; Steer left / right</p>
+        <p>⬆ ⬇ &nbsp; Accelerate / Brake</p>
+        <p>Avoid traffic &amp; survive as long as you can!</p>
+      </div>
+      <button id="start-btn" class="btn">Start Racing</button>
+    </div>
+  </div>
+
+  <!-- GAME OVER SCREEN -->
+  <div id="gameover-screen" class="screen hidden">
+    <div class="screen-box">
+      <h1>💥 Game Over</h1>
+      <p class="subtitle">You crashed!</p>
+      <div class="score-display">
+        <p>Distance: <span id="final-score">0</span> m</p>
+        <p>Best: <span id="best-score">0</span> m</p>
+      </div>
+      <button id="restart-btn" class="btn">Play Again</button>
+    </div>
+  </div>
+
+  <!-- HUD (shown while playing) -->
+  <div id="hud" class="hidden">
+    <div id="hud-left">
+      <div class="hud-label">SPEED</div>
+      <div id="speed-display">0 km/h</div>
+    </div>
+    <div id="hud-center">
+      <div class="hud-label">DISTANCE</div>
+      <div id="score-display">0 m</div>
+    </div>
+    <div id="hud-right">
+      <div class="hud-label">LEVEL</div>
+      <div id="level-display">1</div>
+    </div>
+  </div>
+
+  <!-- THREE.JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GAME SCRIPT -->
+  <script src="game.js"></script>
+</body>
+</html>
